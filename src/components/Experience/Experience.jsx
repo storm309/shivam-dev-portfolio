@@ -12,10 +12,7 @@ const Experience = () => {
         <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
         <p className="text-gray-400 mt-4 text-lg font-semibold">
-         A dedicated and creative problem-solver with a keen interest in full-stack and mobile application development. 
-         My focus is on leveraging modern technologies to build user-centric products. 
-         I am a quick learner, thrive in collaborative settings, and am ready to make a tangible 
-         contribution to a development team.
+         Mai hu shivam
         </p>
       </div>
 
