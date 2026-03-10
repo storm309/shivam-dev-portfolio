@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-lg font-semibold cursor-pointer">
           <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Shivam</span>
+          <span className="text-white">Shivam Kumar</span>
           <span className="text-[#8245ec]">/</span>
           <span className="text-white">Pandey</span>
           <span className="text-[#8245ec]">&gt;</span>
@@ -122,7 +122,7 @@ const Navbar = () => {
             ))}
             <div className="flex space-x-4">
               <a
-                href="https://github.com/codingmastr"
+                href="https://github.com/storm309"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"

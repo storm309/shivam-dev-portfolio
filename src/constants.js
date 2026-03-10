@@ -43,78 +43,92 @@ import mvvmLogo from './assets/tech_logo/mvvm.png';
 
 // Company & Education Logos
 import projectLogo from './assets/company_logo/webverse_logo.png';
+import agcLogo from './assets/company_logo/agc_logo.png';
+import newtonLogo from './assets/company_logo/newtonschool_logo.png';
 import glaLogo from './assets/education_logo/gla_logo.png';
 import bsaLogo from './assets/education_logo/bsa_logo.png';
 import vpsLogo from './assets/education_logo/vps_logo.png';
 
 // Project Section Logos
-import movierecLogo from './assets/work_logo/movie_rec.png';
-import bookshopLogo from './assets/work_logo/bookshop.png'; 
-import ecommerceLogo from './assets/work_logo/ecommerce.png'; 
+import risklensLogo from './assets/work_logo/cs_prep.png';
+import sportnovaLogo from './assets/work_logo/cm.png';
+import aiCodeReviewLogo from './assets/work_logo/github_det.png';
+import libraryMgmtLogo from './assets/work_logo/bookshop.png';
 
 
 export const SkillsInfo = [
-  {
-    title: 'Frontend',
-    skills: [
-      { name: 'HTML', logo: htmlLogo },
-      { name: 'CSS', logo: cssLogo },
-      { name: 'JavaScript', logo: javascriptLogo },
-      { name: 'React JS', logo: reactjsLogo },
-      { name: 'Next JS', logo: nextjsLogo },
-      { name: 'Tailwind CSS', logo: tailwindcssLogo },
-      { name: 'Bootstrap', logo: bootstrapLogo },
-    ],
-  },
-  {
-    title: 'Backend',
-    skills: [
-      { name: 'Node JS', logo: nodejsLogo },
-      { name: 'Express JS', logo: expressjsLogo },
-      { name: 'MySQL', logo: mysqlLogo },
-      { name: 'MongoDB', logo: mongodbLogo },
-      { name: 'Firebase', logo: firebaseLogo },
-      { name: 'PostgreSQL', logo: postgreLogo },
-    ],
-  },
   {
     title: 'Languages',
     skills: [
       { name: 'C', logo: cLogo },
       { name: 'C++', logo: cppLogo },
       { name: 'Java', logo: javaLogo },
+      { name: 'JavaScript (ES6+)', logo: javascriptLogo },
       { name: 'Python', logo: pythonLogo },
-      { name: 'JavaScript', logo: javascriptLogo },
-      { name: 'TypeScript', logo: typescriptLogo },
-      { name: 'Kotlin', logo: kotlinLogo }, 
+      { name: 'Kotlin', logo: kotlinLogo },
     ],
   },
   {
-    title: 'Android Development', 
+    title: 'Frameworks',
     skills: [
-        { name: 'Android Studio', logo: androidStudioLogo },
-        { name: 'Jetpack Compose', logo: jetpackComposeLogo },
-        { name: 'RoomDB', logo: roomdbLogo },
-        { name: 'Retrofit', logo: retrofitLogo },
-        { name: 'MVVM', logo: mvvmLogo },
+      { name: 'HTML & CSS', logo: htmlLogo },
+      { name: 'Bootstrap', logo: bootstrapLogo },
+      { name: 'Node.js', logo: nodejsLogo },
+      { name: 'React.js', logo: reactjsLogo },
     ],
   },
   {
-    title: 'Tools',
+    title: 'Tools/Platforms',
     skills: [
-      { name: 'Git', logo: gitLogo },
-      { name: 'GitHub', logo: githubLogo },
+      { name: 'MySQL', logo: mysqlLogo },
+      { name: 'MongoDB', logo: mongodbLogo },
+      { name: 'Firebase', logo: firebaseLogo },
+      { name: 'PostgreSQL', logo: postgreLogo },
+      { name: 'Spring Boot', logo: springbootLogo },
+      { name: 'Git & GitHub', logo: gitLogo },
       { name: 'VS Code', logo: vscodeLogo },
-      { name: 'Postman', logo: postmanLogo },
-      { name: 'Compass', logo: mcLogo },
-      { name: 'Vercel', logo: vercelLogo },
-      { name: 'Netlify', logo: netlifyLogo },
+      { name: 'Android Studio', logo: androidStudioLogo },
+    ],
+  },
+  {
+    title: 'Soft Skills',
+    skills: [
+      { name: 'Team Collaboration', logo: null },
+      { name: 'Adaptability', logo: null },
+      { name: 'Leadership', logo: null },
+      { name: 'Quick Learning', logo: null },
     ],
   },
 ];
 
 export const experiences = [
-    
+  {
+    id: 0,
+    img: glaLogo,
+    role: "Hackathon Participant",
+    company: "LPU Hackathons & Coding Events",
+    date: "2025 - Present",
+    desc: "Actively participated in multiple hackathons and coding competitions at LPU, collaborating in teams to design and build working prototypes under tight deadlines. Gained hands-on experience in rapid prototyping, team coordination, and delivering end-to-end solutions.",
+    skills: ["React", "Node.js", "MongoDB", "Teamwork", "Problem Solving"],
+  },
+  {
+    id: 1,
+    img: projectLogo,
+    role: "Full Stack Developer",
+    company: "Collaborative Projects with Peers",
+    date: "2025 - Present",
+    desc: "Worked with a team of friends on real-world full stack projects including an AI-powered sports platform (SportNova) and a fintech Android app (Risklens). Took ownership of both frontend and backend modules, integrated REST APIs, and followed industry practices like MVC architecture and JWT authentication.",
+    skills: ["MERN Stack", "Kotlin", "Firebase", "REST APIs", "JWT", "Git & GitHub"],
+  },
+  {
+    id: 2,
+    img: agcLogo,
+    role: "Android Developer",
+    company: "Self-Initiated Android Projects",
+    date: "2025 - Present",
+    desc: "Independently built Android applications using Kotlin and Android Studio, implementing features like real-time data sync with Firebase, SQLite local storage, and REST API integration. Focused on clean architecture, smooth UX, and performance optimization across various screen sizes.",
+    skills: ["Kotlin", "Android Studio", "Firebase", "SQLite", "REST APIs", "MVVM"],
+  },
 ];
 
 
@@ -153,32 +167,42 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "Full-Stack Book Shopping Website",
-    description: "A complete full-stack e-commerce platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js). Includes secure RESTful APIs for product, user, and order management. Features JWT authentication and an interactive React front-end with Context API for state management.",
-    date: "May 2025 - Sept 2025",
-    image: bookshopLogo, 
-    tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "Context API"],
-    github: "https://github.com/yourusername/bookshop-mern",
-    webapp: "https://yourbookshopdemo.com",
+    title: "Risklens – Fintech Android App",
+    description: "Developed an Android-based fintech application using Kotlin, enabling users to track stock performance and monitor investments in real time. Integrated third-party REST APIs to fetch live market data and financial news, ensuring accurate and up-to-date information. Improved user engagement and decision-making by delivering real-time insights and a smooth, responsive user experience.",
+    date: "Jun 2025 - Aug 2025",
+    image: risklensLogo,
+    tags: ["Kotlin", "Android Studio", "REST APIs", "Firebase", "SQLite"],
+    github: "https://github.com/storm309/risklens",
+    webapp: "#",
   },
   {
     id: 1,
-    title: "E-Commerce Website Frontend",
-    description: "A responsive and visually appealing e-commerce front-end built with HTML, Tailwind CSS, and modern JavaScript. Includes a dynamic shopping cart, product filtering, and sorting system for a smooth and intuitive user experience.",
-    date: "July 2024 - Nov 2024",
-    image: ecommerceLogo, 
-    tags: ["HTML", "Tailwind CSS", "JavaScript (ES6+)", "Responsive UI"],
-    github: "https://github.com/yourusername/ecommerce-frontend",
-    webapp: "https://yourecommercesite.com",
+    title: "SportNova - AI-Powered Sports Performance Platform",
+    description: "Developed an AI-powered sports analytics platform to track and optimize athlete performance using real-time metrics and video uploads. Built a responsive dashboard with React, Tailwind CSS, and Framer Motion featuring interactive charts and modern UI design. Integrated Google Gemini AI to provide personalized training insights, player comparisons, and intelligent role-based recommendations. Implemented JWT authentication, role-based access control, RESTful APIs, and MongoDB for secure data and video management.",
+    date: "Jun 2025 - Sep 2025",
+    image: sportnovaLogo,
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "Google Gemini AI", "JWT", "Tailwind CSS", "Framer Motion", "Multer", "Axios"],
+    github: "https://github.com/storm309/sportnova",
+    webapp: "#",
   },
   {
     id: 2,
-    title: "Recommendo - Movie Recommendation System",
-    description: `A personalized recommendation engine that suggests content to users. Based on a user's viewing history and ratings, it can recommend movies (like Netflix), products (like Amazon), or music (like Spotify).`,
-    date: "Jan 2024 - Apr 2024",
-    image: movierecLogo,
-    tags: ["Python", "Machine Learning", "Pandas", "NumPy", "Scikit-Learn"],
-    github: "https://github.com/yourusername/recommendo",
-    webapp: "https://recommendo-demo.com",
+    title: "AI Code Review Platform",
+    description: "AI-powered code review platform built with Spring Boot, React, PostgreSQL, and Google Gemini API that analyzes source code, detects bugs, suggests improvements, and provides code quality scores.",
+    date: "Mar 2026",
+    image: aiCodeReviewLogo,
+    tags: ["React", "Java", "Spring Boot", "PostgreSQL", "Google Gemini API"],
+    github: "https://github.com/storm309/ai-code-review-platform",
+    webapp: "#",
+  },
+  {
+    id: 3,
+    title: "Java Library Management System",
+    description: "A console-based Library Management System built using Core Java and MVC architecture. Demonstrates OOP concepts, collections framework, and real-world book management operations.",
+    date: "Mar 2026",
+    image: libraryMgmtLogo,
+    tags: ["Java", "OOP", "MVC Pattern", "Collections Framework", "Core Java"],
+    github: "https://github.com/storm309/java-library-management-system",
+    webapp: "#",
   },
 ];

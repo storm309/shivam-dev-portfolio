@@ -18,16 +18,16 @@ const About = () => {
           </h1>
           {/* Name */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Shivam Pandey
+            Shivam Kumar Pandey
           </h2>
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a </span>
+            <span className="text-white">I am </span>
             <ReactTypingEffect
               text={[
-                'Fullstack Developer',
-                'Android Developer',
-                'Swing Trader',
+                'a Fullstack Developer',
+                'an Android Developer',
+                'a Swing Trader',
               ]}
               speed={100}
               eraseSpeed={50}
@@ -40,10 +40,10 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            Aspiring Full Stack & Android Developer skilled in the MERN stack and Firebase, 
-            passionate about building scalable web and mobile applications. 
-            Strong in problem-solving (DSA) and always eager to learn, collaborate, 
-            and contribute to impactful projects. 🚀
+            A 3rd-year Computer Science student with hands-on experience in Full Stack (MERN) 
+            and Android development. I regularly practice DSA to sharpen my problem-solving skills 
+            and love building scalable, real-world web and mobile applications. 
+            Always curious, always learning — driven to grow with every project I take on. 🚀
           </p>
           {/* Resume Button */}
           <a
@@ -73,7 +73,7 @@ const About = () => {
           >
             <img
               src={profileImage}
-              alt="Shivam Pandey"
+              alt="Shivam Kumar Pandey"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </Tilt>
