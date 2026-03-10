@@ -2,7 +2,7 @@
 
 A modern, responsive, and interactive personal developer portfolio built with React to showcase my skills, experience, and projects. 
 
-![Portfolio Preview](./public/vite.svg) *// Replace with an actual screenshot of the portfolio*
+[![Live Preview](https://img.shields.io/badge/Live_Preview-View_Portfolio-blue?style=for-the-badge&logo=vercel)](https://shivam-dev-portfolio.vercel.app/)
 
 ## 🚀 Features
 
@@ -87,7 +87,7 @@ To get a local copy up and running, follow these simple steps.
 
 ## 🌐 Live Preview
 
-You can view the live version of this portfolio here: *(Add Vercel/Netlify link here once deployed)*
+You can view the live version of this portfolio here: **[https://shivam-dev-portfolio.vercel.app/](https://shivam-dev-portfolio.vercel.app/)**
 
 ## 📬 Contact
 
