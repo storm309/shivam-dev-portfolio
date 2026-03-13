@@ -17,6 +17,30 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const sectionIds = ["about", "skills", "experience", "work", "education", "achievements", "certificates", "contact"];
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   // Smooth scroll function
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
@@ -31,35 +55,38 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
+    { id: "experience", label: "Activities" },
     { id: "work", label: "Projects" },
     { id: "education", label: "Education" },
+    { id: "achievements", label: "Achievements" },
+    { id: "certificates", label: "Certificates" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition duration-300 px-[5vw] md:px-[6vw] lg:px-[8vw] ${isScrolled
+        ? "bg-[#050414]/85 backdrop-blur-md shadow-md"
+        : "bg-[#050414]/65 backdrop-blur-sm"
+        }`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
+      <div className="max-w-[1400px] mx-auto text-white py-4 flex justify-between items-center gap-4">
         {/* Logo */}
-        <div className="text-lg font-semibold cursor-pointer">
+        <div className="text-xl font-semibold cursor-pointer whitespace-nowrap leading-none flex items-center gap-1">
           <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Shivam Kumar</span>
+          <span className="text-white">Shivam</span>
           <span className="text-[#8245ec]">/</span>
           <span className="text-white">Pandey</span>
           <span className="text-[#8245ec]">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden lg:flex items-center gap-5 xl:gap-7 text-gray-300 text-[1.05rem]">
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
-              }`}
+              className={`cursor-pointer hover:text-[#8245ec] ${activeSection === item.id ? "text-[#8245ec]" : ""
+                }`}
             >
               <button onClick={() => handleMenuItemClick(item.id)}>
                 {item.label}
@@ -69,7 +96,7 @@ const Navbar = () => {
         </ul>
 
         {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden lg:flex items-center gap-4">
           <a
             href="https://github.com/storm309"
             target="_blank"
@@ -89,7 +116,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           {isOpen ? (
             <FiX
               className="text-3xl text-[#8245ec] cursor-pointer"
@@ -106,21 +133,20 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="absolute top-16 left-0 w-full bg-[#050414] border-t border-white/10 z-50 shadow-xl lg:hidden">
+          <ul className="flex flex-col items-center space-y-5 py-6 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
+                className={`cursor-pointer hover:text-white text-base ${activeSection === item.id ? "text-[#8245ec]" : ""
+                  }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
                   {item.label}
                 </button>
               </li>
             ))}
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 pt-2">
               <a
                 href="https://github.com/storm309"
                 target="_blank"

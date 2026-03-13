@@ -1,15 +1,31 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import profileImage from '../../assets/profile2.png';
 
 const About = () => {
+  const quickStats = [
+    { label: 'Projects Completed', value: '10+' },
+    { label: 'Skills Mastered', value: '15+' },
+    { label: 'Hackathons & Events', value: '4+' },
+    { label: 'Certifications', value: '10+' },
+  ];
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       id="about"
+      data-reveal
       className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center" data-reveal>
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
@@ -18,7 +34,7 @@ const About = () => {
           </h1>
           {/* Name */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
-            Shivam Kumar Pandey
+            Shivam Pandey
           </h2>
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
@@ -40,24 +56,61 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            A 3rd-year Computer Science student with hands-on experience in Full Stack (MERN) 
-            and Android development. I regularly practice DSA to sharpen my problem-solving skills 
-            and love building scalable, real-world web and mobile applications. 
-            Always curious, always learning — driven to grow with every project I take on. 🚀
+            I am a Computer Science student who builds full stack and Android projects,
+            solves DSA problems regularly, and enjoys turning ideas into practical,
+            user-friendly products.
           </p>
-          {/* Resume Button */}
-          <a
-            href="https://drive.google.com/file/d/1eSyR36aMtjwDqsbVN-hUhKMqNX44INNn/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
-            style={{
-              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
-            }}
-          >
-            DOWNLOAD CV
-          </a>
+
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+            <button
+              onClick={() => scrollToSection('work')}
+              className="text-white py-3 px-7 rounded-full text-base font-semibold transition duration-300 transform hover:scale-105 bg-gradient-to-r from-purple-600 to-fuchsia-500"
+            >
+              View My Projects
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="text-white py-3 px-7 rounded-full text-base font-semibold transition duration-300 transform hover:scale-105 border border-purple-500/70 bg-[#140d2e]"
+            >
+              Get in Touch
+            </button>
+            <a
+              href="https://drive.google.com/file/d/1eSyR36aMtjwDqsbVN-hUhKMqNX44INNn/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white py-3 px-7 rounded-full text-base font-semibold transition duration-300 transform hover:scale-105 border border-white/20"
+            >
+              Download CV
+            </a>
+          </div>
+
+          <div className="mt-6 flex items-center gap-5 justify-center md:justify-start text-gray-300">
+            <a
+              href="https://github.com/storm309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#8245ec] transition-colors duration-300"
+              aria-label="GitHub"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pandey--shivam/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#8245ec] transition-colors duration-300"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href="mailto:shivampandeyofficial01@gmail.com"
+              className="hover:text-[#8245ec] transition-colors duration-300"
+              aria-label="Email"
+            >
+              <FaEnvelope size={24} />
+            </a>
+          </div>
           
         </div>
         {/* Right Side */}
@@ -73,11 +126,23 @@ const About = () => {
           >
             <img
               src={profileImage}
-              alt="Shivam Kumar Pandey"
+              alt="Shivam Pandey"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </Tilt>
         </div>
+      </div>
+
+      <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4" data-reveal>
+        {quickStats.map((item) => (
+          <div
+            key={item.label}
+            className="rounded-xl border border-white/10 bg-[#110a26] p-4 text-center shadow-[0_0_20px_rgba(130,69,236,0.15)]"
+          >
+            <p className="text-2xl sm:text-3xl font-bold text-white">{item.value}</p>
+            <p className="text-xs sm:text-sm text-gray-400 mt-1">{item.label}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

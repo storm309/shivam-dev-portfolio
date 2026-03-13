@@ -58,45 +58,58 @@ import libraryMgmtLogo from './assets/work_logo/bookshop.png';
 
 export const SkillsInfo = [
   {
-    title: 'Languages',
+    title: 'Frontend',
     skills: [
-      { name: 'C', logo: cLogo },
-      { name: 'C++', logo: cppLogo },
-      { name: 'Java', logo: javaLogo },
       { name: 'JavaScript (ES6+)', logo: javascriptLogo },
-      { name: 'Python', logo: pythonLogo },
-      { name: 'Kotlin', logo: kotlinLogo },
-    ],
-  },
-  {
-    title: 'Frameworks',
-    skills: [
-      { name: 'HTML & CSS', logo: htmlLogo },
-      { name: 'Bootstrap', logo: bootstrapLogo },
-      { name: 'Node.js', logo: nodejsLogo },
+      { name: 'TypeScript', logo: typescriptLogo },
+      { name: 'HTML5', logo: htmlLogo },
+      { name: 'CSS3', logo: cssLogo },
       { name: 'React.js', logo: reactjsLogo },
+      { name: 'Next.js', logo: nextjsLogo },
+      { name: 'Redux', logo: reduxLogo },
+      { name: 'Tailwind CSS', logo: tailwindcssLogo },
+      { name: 'Bootstrap', logo: bootstrapLogo },
     ],
   },
   {
-    title: 'Tools/Platforms',
+    title: 'Backend',
     skills: [
-      { name: 'MySQL', logo: mysqlLogo },
-      { name: 'MongoDB', logo: mongodbLogo },
-      { name: 'Firebase', logo: firebaseLogo },
-      { name: 'PostgreSQL', logo: postgreLogo },
+      { name: 'Node.js', logo: nodejsLogo },
+      { name: 'Express.js', logo: expressjsLogo },
       { name: 'Spring Boot', logo: springbootLogo },
-      { name: 'Git & GitHub', logo: gitLogo },
-      { name: 'VS Code', logo: vscodeLogo },
-      { name: 'Android Studio', logo: androidStudioLogo },
+      { name: 'Firebase', logo: firebaseLogo },
+      { name: 'REST APIs', logo: postmanLogo },
     ],
   },
   {
-    title: 'Soft Skills',
+    title: 'Android',
     skills: [
-      { name: 'Team Collaboration', logo: null },
-      { name: 'Adaptability', logo: null },
-      { name: 'Leadership', logo: null },
-      { name: 'Quick Learning', logo: null },
+      { name: 'Kotlin', logo: kotlinLogo },
+      { name: 'Jetpack Compose', logo: jetpackComposeLogo },
+      { name: 'Android Studio', logo: androidStudioLogo },
+      { name: 'Room DB', logo: roomdbLogo },
+      { name: 'Retrofit', logo: retrofitLogo },
+      { name: 'MVVM', logo: mvvmLogo },
+    ],
+  },
+  {
+    title: 'Databases',
+    skills: [
+      { name: 'MongoDB', logo: mongodbLogo },
+      { name: 'MySQL', logo: mysqlLogo },
+      { name: 'PostgreSQL', logo: postgreLogo },
+      { name: 'Firebase Realtime DB', logo: firebaseLogo },
+    ],
+  },
+  {
+    title: 'Tools & Deployment',
+    skills: [
+      { name: 'Git', logo: gitLogo },
+      { name: 'GitHub', logo: githubLogo },
+      { name: 'Postman', logo: postmanLogo },
+      { name: 'VS Code', logo: vscodeLogo },
+      { name: 'Vercel', logo: vercelLogo },
+      { name: 'Netlify', logo: netlifyLogo },
     ],
   },
 ];
@@ -163,12 +176,46 @@ export const education = [
   },
 ];
 
+export const achievements = [
+  {
+    id: 0,
+    title: "DSA Problem Solver",
+    detail:
+      "Regularly solve data structure and algorithm problems across LeetCode, GeeksForGeeks, and other platforms to sharpen logic and interview readiness.",
+    metric: "300+ Problems",
+  },
+  {
+    id: 1,
+    title: "Hackathon & Team Collaboration",
+    detail:
+      "Participated in multiple hackathons and coding events, delivering prototypes with strong teamwork under deadlines.",
+    metric: "4+ Events",
+  },
+  {
+    id: 2,
+    title: "Full Stack Real-World Builds",
+    detail:
+      "Built portfolio-grade projects across web and Android, from frontend architecture to backend APIs and data storage.",
+    metric: "6+ Major Builds",
+  },
+  {
+    id: 3,
+    title: "Certifications & Continuous Learning",
+    detail:
+      "Consistently upskilling through certifications and hands-on implementation in modern development stacks.",
+    metric: "10+ Certificates",
+  },
+];
+
 
 export const projects = [
   {
     id: 0,
     title: "Risklens – Fintech Android App",
-    description: "Developed an Android-based fintech application using Kotlin, enabling users to track stock performance and monitor investments in real time. Integrated third-party REST APIs to fetch live market data and financial news, ensuring accurate and up-to-date information. Improved user engagement and decision-making by delivering real-time insights and a smooth, responsive user experience.",
+    description: "Developed an Android-based fintech application using Kotlin, enabling users to track stock performance and monitor investments in real time. Integrated third-party REST APIs to fetch live market data and financial news, ensuring accurate and up-to-date information.",
+    role: "I designed and built the full Android application independently — from UI screens in Kotlin + Jetpack Compose to REST API integration and local caching with SQLite. I also set up Firebase for user authentication and real-time data sync.",
+    challenges: "The biggest challenge was handling real-time stock data efficiently without draining battery. I solved this by implementing a background polling service with exponential backoff and caching responses locally with SQLite.",
+    impact: "Delivered a fully functional fintech app with real-time market data, smooth UX across screen sizes, and reliable offline access — demonstrating end-to-end Android development capability.",
     date: "Jun 2025 - Aug 2025",
     image: risklensLogo,
     tags: ["Kotlin", "Android Studio", "REST APIs", "Firebase", "SQLite"],
@@ -178,7 +225,10 @@ export const projects = [
   {
     id: 1,
     title: "SportNova - AI-Powered Sports Performance Platform",
-    description: "Developed an AI-powered sports analytics platform to track and optimize athlete performance using real-time metrics and video uploads. Built a responsive dashboard with React, Tailwind CSS, and Framer Motion featuring interactive charts and modern UI design. Integrated Google Gemini AI to provide personalized training insights, player comparisons, and intelligent role-based recommendations. Implemented JWT authentication, role-based access control, RESTful APIs, and MongoDB for secure data and video management.",
+    description: "An AI-powered sports analytics platform to track and optimize athlete performance using real-time metrics and video uploads, with Google Gemini AI providing personalized training insights.",
+    role: "Led full-stack development — built the React dashboard with interactive charts and animations, designed RESTful APIs in Node.js/Express, integrated Google Gemini AI for performance insights, and implemented JWT-based role access control.",
+    challenges: "Handling large video uploads while keeping the UI responsive was a key challenge. I used Multer for streaming uploads, offloaded processing to background jobs, and implemented progress indicators on the frontend to improve UX.",
+    impact: "Built a production-grade MERN + AI platform demonstrating integration of Generative AI into real-world applications, with multi-role access, video management, and data-driven athlete dashboards.",
     date: "Jun 2025 - Sep 2025",
     image: sportnovaLogo,
     tags: ["React", "Node.js", "Express.js", "MongoDB", "Google Gemini AI", "JWT", "Tailwind CSS", "Framer Motion", "Multer", "Axios"],
@@ -189,6 +239,9 @@ export const projects = [
     id: 2,
     title: "AI Code Review Platform",
     description: "AI-powered code review platform built with Spring Boot, React, PostgreSQL, and Google Gemini API that analyzes source code, detects bugs, suggests improvements, and provides code quality scores.",
+    role: "Built the Spring Boot backend with REST endpoints for code submission and analysis, integrated Google Gemini API for AI-powered review generation, designed the PostgreSQL schema, and developed the React frontend for code input and result display.",
+    challenges: "Parsing and safely sending raw code to the Gemini API while avoiding prompt injection and handling large inputs was tricky. I implemented input sanitization and chunked large files before sending to the API.",
+    impact: "Delivered a working AI code reviewer that can analyze code in multiple languages and return structured feedback — showcasing Java backend + AI integration skills in a full-stack context.",
     date: "Mar 2026",
     image: aiCodeReviewLogo,
     tags: ["React", "Java", "Spring Boot", "PostgreSQL", "Google Gemini API"],
@@ -199,10 +252,96 @@ export const projects = [
     id: 3,
     title: "Java Library Management System",
     description: "A console-based Library Management System built using Core Java and MVC architecture. Demonstrates OOP concepts, collections framework, and real-world book management operations.",
+    role: "Designed the full system architecture using MVC pattern, implemented all CRUD operations for books and members using Java Collections, and structured the codebase into clearly separated Model, View, and Controller layers.",
+    challenges: "Ensuring data consistency across collections without a database required careful use of Java's Collections framework and implementing proper search/filter logic manually using streams and iterators.",
+    impact: "Demonstrates strong grasp of OOP principles, clean code architecture, and Core Java proficiency — a solid foundation project showcasing software design skills beyond frameworks.",
     date: "Mar 2026",
     image: libraryMgmtLogo,
     tags: ["Java", "OOP", "MVC Pattern", "Collections Framework", "Core Java"],
     github: "https://github.com/storm309/java-library-management-system",
     webapp: "#",
+  },
+];
+
+export const certificates = [
+  {
+    id: 0,
+    title: "Full Stack Web Development",
+    issuer: "Coursera",
+    date: "Jan 2025",
+    credentialId: "COUR-FSW-2025-001",
+    tags: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+  },
+  {
+    id: 1,
+    title: "Android Development with Kotlin",
+    issuer: "Google Developers",
+    date: "Feb 2025",
+    credentialId: "GD-ADK-2025-109",
+    tags: ["Kotlin", "Jetpack Compose", "Android Studio"],
+  },
+  {
+    id: 2,
+    title: "Data Structures & Algorithms",
+    issuer: "Udemy",
+    date: "Mar 2024",
+    credentialId: "UDM-DSA-2024-774",
+    tags: ["Java", "DSA", "Problem Solving"],
+  },
+  {
+    id: 3,
+    title: "Java Programming Masterclass",
+    issuer: "Udemy",
+    date: "Jun 2024",
+    credentialId: "UDM-JPM-2024-512",
+    tags: ["Java", "OOP", "Spring Boot"],
+  },
+  {
+    id: 4,
+    title: "MongoDB for Developers",
+    issuer: "MongoDB University",
+    date: "Aug 2024",
+    credentialId: "MDB-DEV-2024-338",
+    tags: ["MongoDB", "NoSQL", "Databases"],
+  },
+  {
+    id: 5,
+    title: "React – The Complete Guide",
+    issuer: "Udemy",
+    date: "Sep 2024",
+    credentialId: "UDM-RCG-2024-901",
+    tags: ["React", "Redux", "Hooks"],
+  },
+  {
+    id: 6,
+    title: "Spring Boot & Microservices",
+    issuer: "Udemy",
+    date: "Nov 2024",
+    credentialId: "UDM-SBM-2024-643",
+    tags: ["Java", "Spring Boot", "REST APIs"],
+  },
+  {
+    id: 7,
+    title: "Git & GitHub Complete Guide",
+    issuer: "Coursera",
+    date: "Apr 2024",
+    credentialId: "COUR-GIT-2024-207",
+    tags: ["Git", "GitHub", "Version Control"],
+  },
+  {
+    id: 8,
+    title: "JavaScript (Basic)",
+    issuer: "HackerRank",
+    date: "2024",
+    credentialId: "HR-JS-BASIC",
+    tags: ["JavaScript", "ES6", "Programming Basics"],
+  },
+  {
+    id: 9,
+    title: "SQL (Basic)",
+    issuer: "HackerRank",
+    date: "Sep 19, 2025",
+    credentialId: "O5E498AB97A1",
+    tags: ["SQL", "Databases", "Querying"],
   },
 ];
