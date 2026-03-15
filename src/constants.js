@@ -55,6 +55,12 @@ import sportnovaLogo from './assets/work_logo/cm.png';
 import aiCodeReviewLogo from './assets/work_logo/github_det.png';
 import libraryMgmtLogo from './assets/work_logo/bookshop.png';
 
+// Certificate Images
+import jsCertImage from './assets/certificate_logo/js(Basic).png';
+import sqlCertImage from './assets/certificate_logo/Sql(Basic).png';
+import androidCertImage from './assets/certificate_logo/summer training in Android.jpg';
+import nptelCloudImage from './assets/certificate_logo/nptel-cloud-computing.png';
+
 
 export const SkillsInfo = [
   {
@@ -203,7 +209,7 @@ export const achievements = [
     title: "Certifications & Continuous Learning",
     detail:
       "Consistently upskilling through certifications and hands-on implementation in modern development stacks.",
-    metric: "10+ Certificates",
+    metric: "5+ Certificates",
   },
 ];
 
@@ -261,79 +267,55 @@ export const projects = [
     github: "https://github.com/storm309/java-library-management-system",
     webapp: "#",
   },
+  {
+    id: 4,
+    title: "Chatbot - AI Travel Companion",
+    description: "AI-powered Travel Companion Finder that connects travelers based on destination, interests, and dates. Built using HTML, CSS, JavaScript and integrated with Google Gemini API for intelligent travel planning and personalized itinerary suggestions.",
+    role: "Architected and developed the complete frontend application using vanilla HTML, CSS, and JavaScript with a focus on responsive design. Integrated the Google Gemini API to handle natural language queries and generate intelligent travel suggestions. Designed the chat interface for seamless user interaction, implemented real-time message handling, and created dynamic suggestion cards for travel recommendations.",
+    challenges: "Parsing natural language queries accurately and extracting structured information (destination, dates, interests) without a dedicated backend was challenging. I implemented a keyword-based extraction algorithm using regex patterns and semantic analysis. Managing API rate limits and handling long-running requests required implementing request queuing and timeout mechanisms.",
+    impact: "Built a fully functional AI chatbot that demonstrates expertise in prompt engineering, API integration, and responsive UI design. The application successfully connects travelers with AI-powered recommendations, showcasing the practical application of generative AI in the travel domain. Achieved 100% mobile responsiveness across all devices.",
+    date: "Feb 2026",
+    image: aiCodeReviewLogo,
+    tags: ["JavaScript", "HTML", "CSS", "Google Gemini API", "Responsive Design", "API Integration", "DOM Manipulation"],
+    github: "https://github.com/storm309/chatbot",
+    webapp: "#",
+  },
 ];
+
+// Certificate Logos & PDFs
+// Import your certificate images/PDFs here
+// For images: import cert1Logo from './assets/certificate_logo/certificate1.png';
+// For PDFs: import cert1PDF from './assets/certificate_logo/certificate1.pdf';
 
 export const certificates = [
   {
-    id: 0,
-    title: "Full Stack Web Development",
-    issuer: "Coursera",
-    date: "Jan 2025",
-    credentialId: "COUR-FSW-2025-001",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+    id: 10,
+    title: "Cloud Computing",
+    issuer: "NPTEL (IIT Kharagpur)",
+    date: "Apr 2025",
+    credentialId: "NPTEL25CS11S1537302720",
+    image: nptelCloudImage,
+    pdf: null,
+    tags: ["Cloud Computing", "AWS", "Azure", "Infrastructure"],
   },
   {
     id: 1,
     title: "Android Development with Kotlin",
     issuer: "Google Developers",
-    date: "Feb 2025",
+    date: "15 Jul 2025",
     credentialId: "GD-ADK-2025-109",
+    image: androidCertImage,
+    pdf: null,
     tags: ["Kotlin", "Jetpack Compose", "Android Studio"],
-  },
-  {
-    id: 2,
-    title: "Data Structures & Algorithms",
-    issuer: "Udemy",
-    date: "Mar 2024",
-    credentialId: "UDM-DSA-2024-774",
-    tags: ["Java", "DSA", "Problem Solving"],
-  },
-  {
-    id: 3,
-    title: "Java Programming Masterclass",
-    issuer: "Udemy",
-    date: "Jun 2024",
-    credentialId: "UDM-JPM-2024-512",
-    tags: ["Java", "OOP", "Spring Boot"],
-  },
-  {
-    id: 4,
-    title: "MongoDB for Developers",
-    issuer: "MongoDB University",
-    date: "Aug 2024",
-    credentialId: "MDB-DEV-2024-338",
-    tags: ["MongoDB", "NoSQL", "Databases"],
-  },
-  {
-    id: 5,
-    title: "React – The Complete Guide",
-    issuer: "Udemy",
-    date: "Sep 2024",
-    credentialId: "UDM-RCG-2024-901",
-    tags: ["React", "Redux", "Hooks"],
-  },
-  {
-    id: 6,
-    title: "Spring Boot & Microservices",
-    issuer: "Udemy",
-    date: "Nov 2024",
-    credentialId: "UDM-SBM-2024-643",
-    tags: ["Java", "Spring Boot", "REST APIs"],
-  },
-  {
-    id: 7,
-    title: "Git & GitHub Complete Guide",
-    issuer: "Coursera",
-    date: "Apr 2024",
-    credentialId: "COUR-GIT-2024-207",
-    tags: ["Git", "GitHub", "Version Control"],
   },
   {
     id: 8,
     title: "JavaScript (Basic)",
     issuer: "HackerRank",
-    date: "2024",
+    date: "19 Sep 2025",
     credentialId: "HR-JS-BASIC",
+    image: jsCertImage,
+    pdf: "/certificates/js-basic-certificate.pdf",
     tags: ["JavaScript", "ES6", "Programming Basics"],
   },
   {
@@ -342,6 +324,8 @@ export const certificates = [
     issuer: "HackerRank",
     date: "Sep 19, 2025",
     credentialId: "O5E498AB97A1",
+    image: sqlCertImage,
+    pdf: "/certificates/sql-basic-certificate.pdf",
     tags: ["SQL", "Databases", "Querying"],
   },
 ];

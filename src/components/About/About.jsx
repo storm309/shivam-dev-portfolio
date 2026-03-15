@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
@@ -9,7 +8,7 @@ const About = () => {
     { label: 'Projects Completed', value: '10+' },
     { label: 'Skills Mastered', value: '15+' },
     { label: 'Hackathons & Events', value: '4+' },
-    { label: 'Certifications', value: '10+' },
+    { label: 'Certifications', value: '5+' },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -75,7 +74,7 @@ const About = () => {
               Get in Touch
             </button>
             <a
-              href="https://drive.google.com/file/d/1zGiOfAxQsZ9dEnkaOq_CfzbsYmE8oBwz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1xZ4IqvnA5Oqc1HAJ1bcVny71_sQQjQA4/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white py-3 px-7 rounded-full text-base font-semibold transition duration-300 transform hover:scale-105 border border-white/20"

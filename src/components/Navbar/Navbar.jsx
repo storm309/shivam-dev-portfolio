@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // Detect scroll and change navbar background
   useEffect(() => {
@@ -16,6 +17,17 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Apply theme to document
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.remove("light-mode");
+      document.documentElement.classList.add("dark-mode");
+    } else {
+      document.documentElement.classList.remove("dark-mode");
+      document.documentElement.classList.add("light-mode");
+    }
+  }, [isDarkMode]);
 
   useEffect(() => {
     const sectionIds = ["about", "skills", "experience", "work", "education", "achievements", "certificates", "contact"];
@@ -95,8 +107,15 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Social Icons */}
+        {/* Social Icons & Theme Toggle */}
         <div className="hidden lg:flex items-center gap-4">
+          <button
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className="p-2 rounded-full hover:bg-white/10 transition-all text-gray-300 hover:text-[#8245ec]"
+            title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            {isDarkMode ? <FiSun size={24} /> : <FiMoon size={24} />}
+          </button>
           <a
             href="https://github.com/storm309"
             target="_blank"

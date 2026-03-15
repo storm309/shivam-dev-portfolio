@@ -52,4 +52,58 @@ section[id] {
     scroll-margin-top: 88px;
   }
 }
+
+/* Dark Mode (Default) */
+html.dark-mode {
+  --bg-primary: #050414;
+  --bg-secondary: #111827;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --accent: #8245ec;
+  --accent-cyan: #00d9ff;
+}
+
+/* Light Mode */
+html.light-mode {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --accent: #8245ec;
+  --accent-cyan: #00a9c6;
+}
+
+html.light-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.light-mode body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.light-mode * {
+  color-scheme: light;
+}
+
+html.light-mode section,
+html.light-mode div,
+html.light-mode p,
+html.light-mode h1,
+html.light-mode h2,
+html.light-mode h3,
+html.light-mode h4,
+html.light-mode h5,
+html.light-mode h6 {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.light-mode {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html.light-mode img {
+  filter: invert(1) hue-rotate(180deg);
+}
   
