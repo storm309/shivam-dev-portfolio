@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
+import Welcome from "./components/Welcome/Welcome";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
@@ -43,6 +44,7 @@ const App = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
       <div className="relative pt-20">
+        <Welcome />
         <Navbar />
         <About />
         <Skills />
