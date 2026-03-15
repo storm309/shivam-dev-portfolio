@@ -5,10 +5,10 @@ const Welcome = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Auto-dismiss after 3 seconds
+    // Auto-dismiss after 2 seconds
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
