@@ -60,6 +60,8 @@ import jsCertImage from './assets/certificate_logo/js(Basic).png';
 import sqlCertImage from './assets/certificate_logo/Sql(Basic).png';
 import androidCertImage from './assets/certificate_logo/summer training in Android.jpg';
 import nptelCloudImage from './assets/certificate_logo/nptel-cloud-computing.png';
+import javaCertImage from './assets/certificate_logo/java_Basic.png';
+import problemSolvingCertImage from './assets/certificate_logo/Problem_Solving.png';
 
 
 export const SkillsInfo = [
@@ -280,6 +282,19 @@ export const projects = [
     github: "https://github.com/storm309/chatbot",
     webapp: "#",
   },
+  {
+    id: 5,
+    title: "Hibernate Banking Management System",
+    description: "A comprehensive console-based Banking Management System built with Java, Hibernate (JPA), and MySQL. Demonstrates CRUD operations and entity relationship mappings such as One-to-Many and Many-to-Many, providing a robust backend for managing customer accounts, branches, loans, and transactions.",
+    role: "Designed and implemented the complete backend system using Java and Hibernate ORM for seamless database interaction. Created well-structured entity models with complex relationships, developed CRUD operations for all banking entities, and established MySQL database schema with proper constraints. Implemented business logic for account management, transaction processing, and loan management.",
+    challenges: "Managing complex entity relationships and lazy loading issues in Hibernate required careful configuration and understanding of JPA lifecycle. Ensuring data consistency across multiple transactions with proper exception handling and rollback mechanisms was critical for a banking system.",
+    impact: "Built a production-ready banking backend system demonstrating mastery of Hibernate ORM, JPA annotations, database design, and enterprise-level application architecture. Successfully showcases ability to work with complex database operations and maintain data integrity in financial systems.",
+    date: "Mar 2026",
+    image: libraryMgmtLogo,
+    tags: ["Java", "Hibernate", "JPA", "MySQL", "ORM", "CRUD", "Banking Applications"],
+    github: "https://github.com/storm309/hibernate-banking-management-system",
+    webapp: "#",
+  },
 ];
 
 // Certificate Logos & PDFs
@@ -327,5 +342,25 @@ export const certificates = [
     image: sqlCertImage,
     pdf: "/certificates/sql-basic-certificate.pdf",
     tags: ["SQL", "Databases", "Querying"],
+  },
+  {
+    id: 2,
+    title: "Java (Basic)",
+    issuer: "HackerRank",
+    date: "16 Mar 2026",
+    credentialId: "HR-JAVA-BASIC",
+    image: javaCertImage,
+    pdf: "/certificates/java-basic-certificate.pdf",
+    tags: ["Java", "OOP", "Programming Basics"],
+  },
+  {
+    id: 3,
+    title: "Problem Solving (Basic)",
+    issuer: "HackerRank",
+    date: "16 Mar 2026",
+    credentialId: "HR-PS-BASIC",
+    image: problemSolvingCertImage,
+    pdf: "/certificates/problem-solving-certificate.pdf",
+    tags: ["Problem Solving", "Algorithms", "Logic"],
   },
 ];
