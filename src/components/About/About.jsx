@@ -55,12 +55,9 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I'm an aspiring Full Stack and Android Developer with a passion for building scalable, 
-            user-centric applications. Currently pursuing my B.Tech in Computer Science at Lovely Professional 
-            University, I combine strong problem-solving skills with hands-on development experience. 
-            I love architecting end-to-end solutions using modern technologies like React, Node.js, and Kotlin, 
-            while consistently sharpening my DSA fundamentals. Beyond coding, I'm interested in trading markets 
-            and exploring innovative tech solutions.
+            Full Stack & Android Developer building scalable solutions with React, Node.js, and Kotlin. 
+            B.Tech CS student at LPU with strong DSA fundamentals and hands-on development experience. 
+            Passionate about end-to-end solutions, trading markets, and innovative tech.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
