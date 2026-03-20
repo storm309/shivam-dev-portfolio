@@ -1,4 +1,4 @@
-# Shivam Kumar - Personal Portfolio
+# Shivam Pandey - Personal Portfolio
 
 A modern, responsive, and interactive personal developer portfolio built with React to showcase my skills, experience, and projects. 
 
