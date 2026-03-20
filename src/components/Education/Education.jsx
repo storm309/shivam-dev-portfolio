@@ -56,8 +56,11 @@ const Education = () => {
                       {edu.school}
                     </h4>
                   </div>
-                  {/* Date at the bottom */}
-                  <p className="text-sm text-gray-500 mt-2">{edu.date}</p>
+                  {/* Date and Grade at the bottom */}
+                  <div className="flex flex-col gap-1 mt-2">
+                    <p className="text-sm text-gray-500">{edu.date}</p>
+                    <p className="text-sm font-semibold text-purple-400">{edu.grade}</p>
+                  </div>
                 </div>
               </div>
 

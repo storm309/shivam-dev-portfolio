@@ -55,9 +55,12 @@ const About = () => {
           </h3>
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a Computer Science student who builds full stack and Android projects,
-            solves DSA problems regularly, and enjoys turning ideas into practical,
-            user-friendly products.
+            I'm an aspiring Full Stack and Android Developer with a passion for building scalable, 
+            user-centric applications. Currently pursuing my B.Tech in Computer Science at Lovely Professional 
+            University, I combine strong problem-solving skills with hands-on development experience. 
+            I love architecting end-to-end solutions using modern technologies like React, Node.js, and Kotlin, 
+            while consistently sharpening my DSA fundamentals. Beyond coding, I'm interested in trading markets 
+            and exploring innovative tech solutions.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start">
