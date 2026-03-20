@@ -18,6 +18,11 @@ dist-ssr
 .idea
 .DS_Store
 *.suo
+
+# Documentation files
+PRESENTATION_SCRIPT.md
+QUICK_TALKING_POINTS.md
+VISUAL_DEMO_GUIDE.md
 *.ntvs*
 *.njsproj
 *.sln
