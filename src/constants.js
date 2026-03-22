@@ -118,6 +118,8 @@ export const SkillsInfo = [
       { name: 'VS Code', logo: vscodeLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
+      { name: 'AWS', logo: null, isText: true },
+      { name: 'Azure', logo: null, isText: true },
     ],
   },
 ];
@@ -219,19 +221,6 @@ export const achievements = [
 export const projects = [
   {
     id: 0,
-    title: "Risklens – Fintech Android App",
-    description: "Developed an Android-based fintech application using Kotlin, enabling users to track stock performance and monitor investments in real time. Integrated third-party REST APIs to fetch live market data and financial news, ensuring accurate and up-to-date information.",
-    role: "I designed and built the full Android application independently — from UI screens in Kotlin + Jetpack Compose to REST API integration and local caching with SQLite. I also set up Firebase for user authentication and real-time data sync.",
-    challenges: "The biggest challenge was handling real-time stock data efficiently without draining battery. I solved this by implementing a background polling service with exponential backoff and caching responses locally with SQLite.",
-    impact: "Delivered a fully functional fintech app with real-time market data, smooth UX across screen sizes, and reliable offline access — demonstrating end-to-end Android development capability.",
-    date: "Jun 2025 - Aug 2025",
-    image: risklensLogo,
-    tags: ["Kotlin", "Android Studio", "REST APIs", "Firebase", "SQLite"],
-    github: "https://github.com/storm309/risklens",
-    webapp: "#",
-  },
-  {
-    id: 1,
     title: "SportNova - AI-Powered Sports Performance Platform",
     description: "An AI-powered sports analytics platform to track and optimize athlete performance using real-time metrics and video uploads, with Google Gemini AI providing personalized training insights.",
     role: "Led full-stack development — built the React dashboard with interactive charts and animations, designed RESTful APIs in Node.js/Express, integrated Google Gemini AI for performance insights, and implemented JWT-based role access control.",
@@ -244,7 +233,7 @@ export const projects = [
     webapp: "#",
   },
   {
-    id: 2,
+    id: 1,
     title: "AI Code Review Platform",
     description: "AI-powered code review platform built with Spring Boot, React, PostgreSQL, and Google Gemini API that analyzes source code, detects bugs, suggests improvements, and provides code quality scores.",
     role: "Built the Spring Boot backend with REST endpoints for code submission and analysis, integrated Google Gemini API for AI-powered review generation, designed the PostgreSQL schema, and developed the React frontend for code input and result display.",
@@ -254,6 +243,19 @@ export const projects = [
     image: aiCodeReviewLogo,
     tags: ["React", "Java", "Spring Boot", "PostgreSQL", "Google Gemini API"],
     github: "https://github.com/storm309/ai-code-review-platform",
+    webapp: "#",
+  },
+  {
+    id: 2,
+    title: "Risklens – Fintech Android App",
+    description: "Developed an Android-based fintech application using Kotlin, enabling users to track stock performance and monitor investments in real time. Integrated third-party REST APIs to fetch live market data and financial news, ensuring accurate and up-to-date information.",
+    role: "I designed and built the full Android application independently — from UI screens in Kotlin + Jetpack Compose to REST API integration and local caching with SQLite. I also set up Firebase for user authentication and real-time data sync.",
+    challenges: "The biggest challenge was handling real-time stock data efficiently without draining battery. I solved this by implementing a background polling service with exponential backoff and caching responses locally with SQLite.",
+    impact: "Delivered a fully functional fintech app with real-time market data, smooth UX across screen sizes, and reliable offline access — demonstrating end-to-end Android development capability.",
+    date: "Jun 2025 - Aug 2025",
+    image: risklensLogo,
+    tags: ["Kotlin", "Android Studio", "REST APIs", "Firebase", "SQLite"],
+    github: "https://github.com/storm309/risklens",
     webapp: "#",
   },
   {

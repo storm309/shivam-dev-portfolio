@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { projects } from "../../constants";
+import { useScrollTrigger } from "../../hooks/useScrollTrigger";
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showMore, setShowMore] = useState(false);
+  const [ref, isVisible] = useScrollTrigger();
 
   // Manually find SportNova and Risklens to feature them
   const featuredProjects = projects.filter(p => p.title.includes("SportNova") || p.title.includes("Risklens"));
@@ -37,6 +39,7 @@ const Work = () => {
   return (
     <section
       id="work"
+      ref={ref}
       data-reveal
       className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[20vw] font-sans relative"
     >

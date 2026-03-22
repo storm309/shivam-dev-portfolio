@@ -8,6 +8,15 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
 
+  // Handle logo click - scroll to top and refresh
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Reload after smooth scroll completes
+    setTimeout(() => {
+      window.location.reload();
+    }, 500);
+  };
+
   // Detect scroll and change navbar background
   useEffect(() => {
     const handleScroll = () => {
@@ -84,12 +93,16 @@ const Navbar = () => {
     >
       <div className="max-w-[1400px] mx-auto text-white py-4 flex justify-between items-center gap-4">
         {/* Logo */}
-        <div className="text-xl font-semibold cursor-pointer whitespace-nowrap leading-none flex items-center gap-1">
-          <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Shivam</span>
-          <span className="text-[#8245ec]">/</span>
-          <span className="text-white">Pandey</span>
-          <span className="text-[#8245ec]">&gt;</span>
+        <div 
+          onClick={handleLogoClick}
+          className="text-xl font-semibold cursor-pointer whitespace-nowrap leading-none flex items-center gap-1 hover:text-[#8245ec] transition-all duration-300 hover:scale-110 active:scale-95 group"
+          title="Go to Top & Refresh"
+        >
+          <span className="text-[#8245ec] group-hover:animate-pulse">&lt;</span>
+          <span className="text-white group-hover:text-cyan-400 transition-colors">Shivam</span>
+          <span className="text-[#8245ec] group-hover:animate-pulse">/</span>
+          <span className="text-white group-hover:text-cyan-400 transition-colors">Pandey</span>
+          <span className="text-[#8245ec] group-hover:animate-pulse">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
