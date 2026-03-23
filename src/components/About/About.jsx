@@ -104,9 +104,8 @@ const About = () => {
               Get in Touch
             </button>
             <a
-              href="https://drive.google.com/file/d/1xZ4IqvnA5Oqc1HAJ1bcVny71_sQQjQA4/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/Shivam_CV.pdf"
+              download="Shivam_CV.pdf"
               className="text-white py-3 px-7 rounded-full text-base font-semibold transition duration-300 transform hover:scale-105 border border-white/20"
             >
               Download CV
