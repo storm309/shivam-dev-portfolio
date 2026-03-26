@@ -1,7 +1,7 @@
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import profileImage from '../../assets/profile2.png';
+import profileImage from '../../assets/shivam_img.jpeg';
 import { useScrollTrigger, useScrollCounter } from '../../hooks/useScrollTrigger';
 
 const About = () => {
