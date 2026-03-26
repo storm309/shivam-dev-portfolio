@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      circle { fill: #8245ec; }
+      text { font-family: Arial, sans-serif; font-weight: bold; font-size: 100px; text-anchor: middle; dominant-baseline: central; fill: #00f5ff; }
+    </style>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100"/>
+  <!-- Initials -->
+  <text x="100" y="100">SP</text>
+</svg>
